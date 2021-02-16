@@ -20,7 +20,7 @@ void main() {
   dvec2 z = c; // Complex number itself
 
   int i = 0;
-  int maxiter = 50 + int(max(0.0, 2.0 * log(u_zoom))); // Maximum iteration count
+  int maxiter = 40 + int(max(0.0, 2.0 * log(u_zoom))); // Maximum iteration count
   for (i = 0; i < maxiter; i++) {
     z = dvec2(z.x * z.x - z.y * z.y, 2 * z.x * z.y) + c;
     if (z.x * z.x + z.y * z.y > 4.0) break;
